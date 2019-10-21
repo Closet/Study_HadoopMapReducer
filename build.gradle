@@ -1,0 +1,28 @@
+plugins {
+    id 'java'
+}
+
+group 'closset703'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 1.7
+
+repositories {
+    mavenCentral()
+}
+
+[compileJava, compileTestJava]*.options*.encoding = 'UTF-8'
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+    testCompile "org.mockito:mockito-core:1.+"
+    compile group: 'org.apache.hadoop', name: 'hadoop-common', version:'2.7.3'
+    compile group: 'org.apache.hadoop', name: 'hadoop-hdfs', version: '2.7.3'
+    compile group: 'org.apache.hadoop', name: 'hadoop-yarn-common', version: '2.7.3'
+    compile group: 'org.apache.hadoop', name: 'hadoop-minicluster', version: '2.7.3'
+    compile group: 'org.apache.hadoop', name: 'hadoop-mapreduce-client-core', version:'2.7.3'
+    compile group: 'org.apache.hadoop', name: 'hadoop-mapreduce-client-jobclient', version: '2.7.3'
+    compile group: 'org.apache.hadoop', name: 'hadoop-mapreduce-client-app', version: '2.7.3'
+    compile group: 'org.apache.hadoop', name: 'hadoop-mapreduce-client-shuffle', version: '2.7.3'
+    compile group: 'org.apache.hadoop', name: 'hadoop-mapreduce-client-common', version: '2.7.3'
+    compile group: 'org.apache.hadoop', name: 'hadoop-client', version: '2.7.3'
+}
